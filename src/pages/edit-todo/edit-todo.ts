@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-edit-todo',
   templateUrl: 'edit-todo.html',
@@ -21,10 +20,16 @@ export class EditTodoPage {
 
   ionViewDidLoad() {
 
+    let todo = this.navParams.get('todo');
+
+    if(typeof(todo) !== "undefined"){
+      this.todo = todo;
+    }
+
   }
 
   save(){
-    console.log('TODO: finish save function');
+    this.navCtrl.pop();
   }
 
 }

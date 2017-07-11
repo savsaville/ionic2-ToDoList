@@ -22,7 +22,8 @@ import { EditTodoPage } from '../pages/edit-todo/edit-todo';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage, 
+    EditTodoPage
   ],
   providers: [
     StatusBar,
