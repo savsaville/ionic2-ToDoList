@@ -1,21 +1,21 @@
 <ion-header>
     <ion-navbar>
         <ion-title>
-            TODO
+            To-Do
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only (click)="addTodo()"><ion-icon name="add"></ion-icon></button>
+            <button ion-button icon-only (click)="addTodo()">
+                <ion-icon name="add"></ion-icon></button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-list>
+<ion-content>
 
-        <button ion-item (click)="editTodo(todo)" *ngFor="let todo of todos">
-            {{todo.title}}
-        </button>
-
+    <ion-list no-lines>
+        <button ion-item (click)="editTodo(todo)" *ngFor="let todo of dataService.todos">
+      {{todo.title}}
+    </button>
     </ion-list>
 
 </ion-content>
